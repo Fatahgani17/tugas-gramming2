@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz aja sih..</title>
+</head>
+<body>
+        <h1>Quiz Kidz Zaman Old</h1>
+        <h2>Nilaimu:</h2>
+        <h3 id="score"></h3>    
+    
+    <script>  
+        var nilai = 0;
+        var soalPkn =
+        [
+          {soal : "Siapa ketua Pantia Kecil pembahas usulan RDN?", jawaban : "ir.soekarno"},
+          {soal : "Norma yang berkaitan dengan bisikan kalbu dan hati nurani adalah?", jawaban : "kesusilaan", jawaban : "norma kesusuilaan"},
+          {soal : "Sebutkan 1 tokoh yang dipanggil ke Dalat,Vietnam?? (pembuat lagu Indonesia Raya)", jawaban : "dr.radjiman wedyodiningrat"},
+          {soal : "Presiden pertama yang dipilih pada tanggal 18 Agustus 1945 oleh PPKI adalah?", jawaban : "ir.soekarno"},
+          {soal : "Nama gedung tempat sidang BPUPKI pertama adalah?", jawaban : "chuo sangi in"},
+      ]
+
+      soalPkn.forEach(function(data){
+            var jawaban = prompt(data.soal);
+            if(jawaban == data.jawaban){
+                nilai = nilai + 20;
+            }
+        });
+        
+        alert(nilai);
+        document.getElementById('score').innerHTML = nilai;
+    </script>
+</body>
+</html>

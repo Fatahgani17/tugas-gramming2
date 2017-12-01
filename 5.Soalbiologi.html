@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Quiz Kidz Zaman Old</h1>
+    <h2>Nilaimu:</h2>
+    <h3 id="score"></h3>
+    
+    <script> 
+      var nilai = 0;
+      var soalBio =
+      [
+          {soal : "Hewan karnivora memakan?", jawaban : "daging"},
+          {soal : "Paus termasuk hewan yang berkembang biak dengan?", jawaban : "melahirkan"},
+          {soal : "Kelelawar memiliki ciri khusus, yaitu..", jawaban : "ekolokasi"},
+          {soal : "Autotomi pada cicak digunakan untuk?", jawaban : "mengelabuhi musuh"},
+          {soal : "Beruang biasanya tidur panjang pada musim dingin disebut?", jawaban : "hibernasi"},
+          {soal : "Ular mempunyai bisa yang beracun, digunakan untuk?", jawaban : "melindungi diri"},
+          {soal : "Tumbuhan yang bisa melakukan fotosintesis adalah tumbuhan yang mempunyai?", jawaban : "klorofil"},
+          {soal : "Pinguin mempunyai lemak yang tebal pada tubuhnya untuk?", jawaban : "menahan dingin"},
+          {soal : "Bebek memiliki kaki yang beselaput untuk?", jawaban : "berenang"},
+          {soal : "bunglon mempunyai lidah yang panjang untuk?", jawaban : "memangsa serangga"},
+      ]
+
+        soalBio.forEach(function(data){
+            var jawaban = prompt(data.soal);
+            if(jawaban == data.jawaban){
+                nilai = nilai + 10;
+            }
+        });
+
+        alert(nilai);
+        document.getElementById('score').innerHTML = nilai;
+    </script>
+</body>
+</html>
